@@ -1,18 +1,14 @@
  .data
-A:		.word	
-BB:		.word	
-C:		.word   
-temp:	.word   	
-	
-
+A:		.word	-15
+BB:		.word	2
+C:		.word   0
+temp:	.word	0
 
 .text
-
-__start:   bgtz    A, ifpart		# if (A > 0) goto ifpart
-	       mul     temp, BB, BB		# temp=BB*BB
-	       add     c, temp, 12		# c=temp+12 (c=b*b+12)
-		   b       endif
-ifpart:	   mul     temp, 2, BB		# temp=2*BB
-	       add     c, temp, 4		# c=temp+4 (c=2*b+4)
+__start:   bgtz    A, ifpart
+	       mul     temp, BB, BB
+	       add     C, temp, 12
+		   b       endif   
+ifpart:	   mul     temp, 2, BB
+	       add     C, temp, 4
 endif:
-
