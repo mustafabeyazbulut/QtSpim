@@ -10,8 +10,8 @@
 # kare matrisin asal köşegen üzerindeki elemanlarını 1, diğerlerine -1 yapan kod 
 .data 
 # 4 x 4 lük bir kare matris
-ar: 			.space 400
-satir_sutun_sayisi:	.word 10
+ar: 			.space 64
+satir_sutun_sayisi:	.word 4
 
 #test icin
 string1:    		.asciiz "\n"
